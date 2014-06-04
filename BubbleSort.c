@@ -1,30 +1,33 @@
 #include <stdio.h>
 
-
-int find_biggest_number(int givenArray[], int array_len)
-{
-    
-    int a=0;
-    int retval = givenArray[0];
-    for (a=1; a<array_len; a++)
-                if (givenArray[a]>retval)
-                    retval = givenArray[a];
-    return retval;
-}//int biggestnumber
+// Function to find biggest number in an array
+//int find_biggest_number(int givenArray[], int array_len)
+//{
+//    
+//    int a=0;
+//    int retval = givenArray[0];
+//    for (a=1; a<array_len; a++)
+//                if (givenArray[a]>retval)
+//                    retval = givenArray[a];
+//    return retval;
+//}//int biggestnumber
 
 
 #define MAX_NUMS 10
 
 int main()
 {
+    printf("Enter the numbers you want to sort.\n");
     int s;
     int i,j;
-        int array[MAX_NUMS];
-        for (i=0; i<MAX_NUMS; i++)
-        {
-            scanf("%d", &s);
-            array[i]= s;
-        }//end of scanner for
+    
+    //input for array
+    int array[MAX_NUMS];
+    for (i=0; i<MAX_NUMS; i++)
+    {
+        scanf("%d", &s);
+        array[i]= s;
+    }//end of scanner for
     
     //actual sorter
     for (i  = 0; i<MAX_NUMS; i++)
@@ -43,17 +46,19 @@ int main()
     }
     
     //print of sort
-    for (int printVar = 0; printVar<10; printVar++) {
+    printf("Here are the sorted Numbers:\n");
+    for (int printVar = 0; printVar<10; printVar++)
+    {
         printf("%d\n", array[printVar]);
     }
     
     
-        return 0;
+    return 0;
 }
 
 
 /*
- LESSONS ON POINTERS
+ EXPERIMENTS ON POINTERS
  
  
  //int find_circumference(int *address_of_radius)
